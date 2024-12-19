@@ -11,7 +11,7 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-    use HasRoles;
+    //use HasRoles;
 
     /**
      * Atributos que pueden ser asignados en masa.
@@ -26,6 +26,7 @@ class User extends Authenticatable
         'id_genero',
         'id_estado_civil',
         'id_nivel_interes',
+        'id_carrera',
         'email',
         'password'
     ];

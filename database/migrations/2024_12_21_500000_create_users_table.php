@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_genero');
             $table->unsignedBigInteger('id_estado_civil');
             $table->unsignedBigInteger('id_nivel_interes');
+            $table->unsignedBigInteger('id_carrera');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -31,6 +32,7 @@ return new class extends Migration
             $table->foreign('id_genero')->references('id_genero')->on('generos');
             $table->foreign('id_estado_civil')->references('id_estado_civil')->on('estados_civiles');
             $table->foreign('id_nivel_interes')->references('id_nivel_interes')->on('niveles_interes');
+            $table->foreign('id_carrera')->references('id_carrera')->on('carreras');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
