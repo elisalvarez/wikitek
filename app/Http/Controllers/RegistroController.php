@@ -78,7 +78,7 @@ class RegistroController extends Controller
             if ($validator->fails()) {
                 return redirect()->back()
                     ->withErrors($validator)
-                    ->withInput(); // Mantén los datos ingresados en el formulario
+                    ->withInput();
             }
 
             $user = User::create([

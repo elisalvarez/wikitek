@@ -5,16 +5,8 @@ use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\AutenticacionController;
 use App\Http\Controllers\DashboardController;
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::middleware(['guest'])->group(function () {
-    /**
-     * Register Routes
-     */
-
+    
     Route::get('/registro', [RegistroController::class, 'show'])->name('registro');
     Route::post('/registro', [RegistroController::class, 'store'])->name('registro.store');
 
@@ -22,7 +14,6 @@ Route::middleware(['guest'])->group(function () {
 
     Route::get('/login', [AutenticacionController::class, 'show'])->name('login');
     Route::post('/login', [AutenticacionController::class, 'login'])->name('login.user');
-
 
 });
 

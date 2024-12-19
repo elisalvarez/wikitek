@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <!-- Contacto -->
+        <!-- Correos -->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="email" class="form-label">Correo Electrónico</label>
@@ -86,8 +86,6 @@
             </div>
         </div>
 
-        
-      
         <!-- Botón de enviar -->
         <div class="row mt-5">
             <div class="col-8">
